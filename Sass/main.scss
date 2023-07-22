@@ -52,7 +52,7 @@ html, body {
     background-color: $fondo;
     border-bottom: solid lightseagreen;
     .nav-link {
-        color: rgb(2, 37, 54);
+        color: rgb(3, 36, 53);
         font-weight: bold;
         font-size: $fontSize;
     }
@@ -178,4 +178,65 @@ span:hover {
     margin-left: 250px;
 }
 
+.body-ramas {
+    display:flex;
+}
+
+.divis-ram {
+    text-align: center;
+}
+
+.img-ramas { 
+    padding: 15px; 
+    border: 3px solid rgb(28, 102, 14); 
+    .nombre-ram {  //ver porque no anda
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    visibility: hidden;
+    
+    } 
+}
+ .nav-ramas {
+    margin-top: 40px;
+    background-color: rgb(224, 224, 224);
+    
+ 
+}
+        
+.img-ramas {
+      
+      text-align: center;
+
+}
+
+ .img-ramas:hover {
+        opacity: 0.3; 
+       }
+  
+  
+  
+.nav-links {
+    margin-top: 40px;
+    padding: 35px;
+    .nombre-ram{
+      color: #000;
+      margin-left:28px;
+      
+    }
+ }
+
+
+ 
+
+.OtrasAreas {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    text-align:justify;
+    padding: 36px;
+    gap: 13px;
+  
+    p {
+padding-top: 20px;
+    }
+}
 
