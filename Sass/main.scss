@@ -1,15 +1,14 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 $colorHeader: rgb(75, 160, 202);
-$fondo:lightblue;
-$fontSize:large;
-$colorHover:#000;
-$bghover:beige;
-$colorLink:ghostwhite;
+$fondo: lightblue;
+$fontSize: large;
+$colorHover: #000;
+$bghover: beige;
+$colorLink: ghostwhite;
 $borderBox: 1px solid #000;
 //$mobile: 576px;
 //$destok:1200px;
@@ -19,24 +18,53 @@ $breakpoints: (
     lg: 1024px
 );
 
-//@mixin media-up ($breakpoints) {
-    //@media screen and (min-width:map-get($breakpoints,$breakpoints)) {
-       // @content;
-//}
-//}
-
-html, body {
-    height: 100vh;
-  
+@mixin media-up ($breakpoints) {
+    @media screen and (min-width:map-get($breakpoints, $breakpoints)) {
+        @content;
+    }
 }
 
+html,
+body {
+    height: 100%;
+    font-family: Verdana, Tahoma, sans-serif;
+}
 
-.container-fluid { //animarlo ver
+.fill-height {
+    min-height: 100%;
+    height:auto !important; 
+    height: 100%; 
+}
+
+//------------------
+// Index
+//------------------
+.img-sized {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.texto-inicio {
+    
+    padding: 20px 36px;
+
+    p {
+        font-size: 18px;
+        gap: 13px;
+        line-height: 1.7em;
+    }
+}
+
+.header-main {
+    //animarlo ver
     width: 25px;
-    padding: 25px 0px;   
+    padding: 25px 0px;
     margin-top: 0 auto;
     background: $colorHeader;
 }
+
+//---------
+
 .imagen {
     top: 98px;
     margin-right: 15px;
@@ -51,6 +79,7 @@ html, body {
 .navbar-custom {
     background-color: $fondo;
     border-bottom: solid lightseagreen;
+
     .nav-link {
         color: rgb(3, 36, 53);
         font-weight: bold;
@@ -59,7 +88,7 @@ html, body {
 }
 
 
- h1 {
+h1 {
     margin-top: 0px auto;
     display: flex;
     color: black;
@@ -71,172 +100,211 @@ html, body {
     border: 5px solid $fondo;
     border-radius: 15px 0 15px 0;
     box-sizing: border-box;
-
 }
 
 
+h2 {
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+p {
+    padding-left: 20px;
+    font-size: 150%;
+}
+
+//------------------
+// Historia
+//------------------
+.fondo-historia {
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+    position: relative;
+    background-size: 400% 400%;
+    background: linear-gradient(55deg, rgb(17, 16, 16), rgb(134, 89, 177), rgb(35, 35, 146));
+    padding: 20px;
+
+    .histo {
+        width: 90%;
+        margin: 0 auto;
+        color: black;
+        background-color: rgb(226, 214, 147);
+        padding: 20px 30px;
+        font-family: sans-serif;
+        border-radius: 13px;
+        font-size: 14px;
     
-    h2 {
-        font-family:sans-serif;
-        padding-top:20px;
-        text-decoration: underline;
-        
-        
-    }
-    p {
-            padding-left: 20px;
-            font-size: 150%;
-            font-family: serif;
+        h3 {
+            text-decoration: underline;
+    
+            .histo-texto {
+                padding-top: 25px
+            }
+    
         }
     
-
-.fondoHisto { //acomodar esto
-    width:100%;
-    height: 100vh;
-    background-size: 400% 400%;
-    position: relative;
-    background: linear-gradient(55deg,rgb(17, 16, 16),rgb(134, 89, 177),rgb(35, 35, 146));
-
-}
-
-.histo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    background-color: rgb(226, 214, 147);
-    padding: 20px 30px;
-    font-family: sans-serif;
-    border-radius: 13px 13px 13px 13px;
-
-    h3 {
-        text-decoration: underline;
-        .histo-texto {
-           padding-top: 25px 
     }
-
-    }
-    
 }
 
 
-
-.teorias-fondo {
+//------------------
+// Teorias
+//------------------
+.teorias {
     height: 100%;
-    background:linear-gradient(40deg,rgb(29, 25, 25), rgb(71, 163, 163)); 
+    padding: 20px 30px;
+    background-size: 400% 400%;
+    background: linear-gradient(40deg, rgb(29, 25, 25), rgb(71, 163, 163));
+    text-align: center;
+
     a {
         text-decoration: none;
-        color: $colorLink;
-        font-size: $fontSize;
-        &:hover {
-            background-color: $bghover;
-            color: $colorHover;
+    }
+
+    div {
+        margin-left: 20px;
+        background-color: $fondo;
+        cursor: pointer;
+        border: #FFF solid 10px;
+        display: inline-block;
+        box-shadow: 5px 5px 5px rgb(39, 39, 39);
+
+        border-radius: 10px;
+        z-index: -1;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    
+        span {
+            display: block;
+            text-align: center;
+            width: 100%;
+            line-height: 250px;
+            color: #000;
+            font-weight: bolder;
+            font-size: 20px;
+            transition: transform 1s;
         }
     }
+
     .teo-texto {
         color: aliceblue;
         padding-top: 25px;
     }
 }
 
-
-.teorias div { //acomodar esto
-    background-color: $fondo;
-    cursor: pointer;
-    border: #FFF solid 10px;
-    width: 250px;
-    height: 250px;
-    display: inline-block;
-    box-shadow: 5px 5px 5px rgb(39, 39, 39);
-    padding: 25px;
-    border-radius: 5px;
-    margin-top: 50px;
-    z-index: -1;
-
-    span {
-        position:absolute;
-        width: 250px;
-        height: 250px;
-        
-        color: #000;
-        padding-top: 70px;
-        padding-right: 56px;
-        text-align: center;
-        font-weight: bolder;
-        font-size: 20px;
-        border-radius: 5px;
-        transition: transform 1s;
-    }
-}
-
 span:hover {
-    transform: translateY(40px) ;
-}
-
-.btn {
-    margin-left: 250px;
+    transform: translateY(40px);
 }
 
 .body-ramas {
-    display:flex;
+    display: flex;
 }
 
 .divis-ram {
     text-align: center;
 }
 
-.img-ramas { 
-    padding: 15px; 
-    border: 3px solid rgb(28, 102, 14); 
-    .nombre-ram {  //ver porque no anda
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    visibility: hidden;
-    
-    } 
+.img-ramas {
+    padding: 15px;
+    border: 3px solid rgb(28, 102, 14);
+
+    .nombre-ram {
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        visibility: hidden;
+
+    }
 }
- .nav-ramas {
+
+.nav-ramas {
+    padding: 30px 0px;
     margin-top: 40px;
     background-color: rgb(224, 224, 224);
-    
- 
 }
-        
+
 .img-ramas {
-      
-      text-align: center;
-
+    text-align: center;
 }
 
- .img-ramas:hover {
-        opacity: 0.3; 
-       }
-  
-  
-  
-.nav-links {
-    margin-top: 40px;
-    padding: 35px;
-    .nombre-ram{
-      color: #000;
-      margin-left:28px;
-      
+.ramas {
+
+    .nav-item {
+        text-align: center;
+        width: 50%;
+        margin-bottom: 25px;
+        cursor: pointer;
     }
- }
 
+    .nav-links {
+    
+        text-decoration: none;
 
- 
+        &:hover {
+            text-decoration: underline;
+        
+            img {
+                opacity: 0.6;
 
-.OtrasAreas {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    text-align:justify;
-    padding: 36px;
-    gap: 13px;
-  
+            }
+        }
+
+        .nombre-ram {
+            color: #000;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    
+}
+
+.otras-areas {
+    
+    text-align: justify;
+    padding: 20px 36px;
+
     p {
-padding-top: 20px;
+        font-size: 18px;
+        gap: 13px;
+        line-height: 1.7em;
     }
 }
 
+
+//Cards
+.card-text {
+    font-size: 17px;
+    padding: 0px;
+}
+
+
+@media (max-width: 767px) {
+
+    .menu .nav-item {
+        width: 100%;
+    }
+
+    .fondo-historia {
+         padding: 20px 10px;
+    
+        .histo {
+            width: 100%;
+            font-size: 12px;
+
+            p {
+                max-height: 600px;
+                overflow-y: scroll;
+            }
+        }
+    }
+
+    .teorias {
+        
+        div {
+            width: 45%;
+            margin-left: 10px;
+        }
+    }
+}

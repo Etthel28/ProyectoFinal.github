@@ -3,11 +3,33 @@
   padding: 0;
 }
 
-html, body {
-  height: 100vh;
+html,
+body {
+  height: 100%;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
-.container-fluid {
+.fill-height {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+.img-sized {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.texto-inicio {
+  padding: 20px 36px;
+}
+.texto-inicio p {
+  font-size: 18px;
+  gap: 13px;
+  line-height: 1.7em;
+}
+
+.header-main {
   width: 25px;
   padding: 25px 0px;
   margin-top: 0 auto;
@@ -49,7 +71,6 @@ h1 {
 }
 
 h2 {
-  font-family: sans-serif;
   padding-top: 20px;
   text-decoration: underline;
 }
@@ -57,86 +78,74 @@ h2 {
 p {
   padding-left: 20px;
   font-size: 150%;
-  font-family: serif;
 }
 
-.fondoHisto {
+.fondo-historia {
   width: 100%;
   height: 100vh;
-  background-size: 400% 400%;
-  position: relative;
-  background: linear-gradient(55deg, rgb(17, 16, 16), rgb(134, 89, 177), rgb(35, 35, 146));
-}
-
-.histo {
-  position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  background-size: 400% 400%;
+  background: linear-gradient(55deg, rgb(17, 16, 16), rgb(134, 89, 177), rgb(35, 35, 146));
+  padding: 20px;
+}
+.fondo-historia .histo {
+  width: 90%;
+  margin: 0 auto;
   color: black;
   background-color: rgb(226, 214, 147);
   padding: 20px 30px;
   font-family: sans-serif;
-  border-radius: 13px 13px 13px 13px;
+  border-radius: 13px;
+  font-size: 14px;
 }
-.histo h3 {
+.fondo-historia .histo h3 {
   text-decoration: underline;
 }
-.histo h3 .histo-texto {
+.fondo-historia .histo h3 .histo-texto {
   padding-top: 25px;
 }
 
-.teorias-fondo {
+.teorias {
   height: 100%;
+  padding: 20px 30px;
+  background-size: 400% 400%;
   background: linear-gradient(40deg, rgb(29, 25, 25), rgb(71, 163, 163));
+  text-align: center;
 }
-.teorias-fondo a {
+.teorias a {
   text-decoration: none;
-  color: ghostwhite;
-  font-size: large;
 }
-.teorias-fondo a:hover {
-  background-color: beige;
+.teorias div {
+  margin-left: 20px;
+  background-color: lightblue;
+  cursor: pointer;
+  border: #FFF solid 10px;
+  display: inline-block;
+  box-shadow: 5px 5px 5px rgb(39, 39, 39);
+  border-radius: 10px;
+  z-index: -1;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.teorias div span {
+  display: block;
+  text-align: center;
+  width: 100%;
+  line-height: 250px;
   color: #000;
+  font-weight: bolder;
+  font-size: 20px;
+  transition: transform 1s;
 }
-.teorias-fondo .teo-texto {
+.teorias .teo-texto {
   color: aliceblue;
   padding-top: 25px;
 }
 
-.teorias div {
-  background-color: lightblue;
-  cursor: pointer;
-  border: #FFF solid 10px;
-  width: 250px;
-  height: 250px;
-  display: inline-block;
-  box-shadow: 5px 5px 5px rgb(39, 39, 39);
-  padding: 25px;
-  border-radius: 5px;
-  margin-top: 50px;
-  z-index: -1;
-}
-.teorias div span {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  color: #000;
-  padding-top: 70px;
-  padding-right: 56px;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 20px;
-  border-radius: 5px;
-  transition: transform 1s;
-}
-
 span:hover {
   transform: translateY(40px);
-}
-
-.btn {
-  margin-left: 250px;
 }
 
 .body-ramas {
@@ -158,6 +167,7 @@ span:hover {
 }
 
 .nav-ramas {
+  padding: 30px 0px;
   margin-top: 40px;
   background-color: rgb(224, 224, 224);
 }
@@ -166,26 +176,59 @@ span:hover {
   text-align: center;
 }
 
-.img-ramas:hover {
-  opacity: 0.3;
+.ramas .nav-item {
+  text-align: center;
+  width: 50%;
+  margin-bottom: 25px;
+  cursor: pointer;
 }
-
-.nav-links {
-  margin-top: 40px;
-  padding: 35px;
+.ramas .nav-links {
+  text-decoration: none;
 }
-.nav-links .nombre-ram {
+.ramas .nav-links:hover {
+  text-decoration: underline;
+}
+.ramas .nav-links:hover img {
+  opacity: 0.6;
+}
+.ramas .nav-links .nombre-ram {
   color: #000;
-  margin-left: 28px;
+  padding: 0;
+  margin: 0;
 }
 
-.OtrasAreas {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+.otras-areas {
   text-align: justify;
-  padding: 36px;
-  gap: 13px;
+  padding: 20px 36px;
 }
-.OtrasAreas p {
-  padding-top: 20px;
+.otras-areas p {
+  font-size: 18px;
+  gap: 13px;
+  line-height: 1.7em;
+}
+
+.card-text {
+  font-size: 17px;
+  padding: 0px;
+}
+
+@media (max-width: 767px) {
+  .menu .nav-item {
+    width: 100%;
+  }
+  .fondo-historia {
+    padding: 20px 10px;
+  }
+  .fondo-historia .histo {
+    width: 100%;
+    font-size: 12px;
+  }
+  .fondo-historia .histo p {
+    max-height: 600px;
+    overflow-y: scroll;
+  }
+  .teorias div {
+    width: 45%;
+    margin-left: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
