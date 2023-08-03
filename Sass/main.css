@@ -85,25 +85,80 @@ p {
   height: 100vh;
   top: 50%;
   position: relative;
-  background-size: 400% 400%;
-  background: linear-gradient(55deg, rgb(17, 16, 16), rgb(134, 89, 177), rgb(35, 35, 146));
+  background-size: 100% 100%;
+  background-image: radial-gradient(circle at 19.58% 93.44%, #ffffff 0, #c8def4 50%, #6c99c2 100%);
   padding: 20px;
 }
 .fondo-historia .histo {
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
   color: black;
   background-color: rgb(226, 214, 147);
   padding: 20px 30px;
   font-family: sans-serif;
+  border: 2px solid black;
   border-radius: 13px;
   font-size: 14px;
 }
 .fondo-historia .histo h3 {
   text-decoration: underline;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 30px;
+  text-align: center;
 }
 .fondo-historia .histo h3 .histo-texto {
   padding-top: 25px;
+}
+
+/* h3 {
+
+ }*/
+.linea-tiempo {
+  position: relative;
+  left: 35%;
+  width: 500px;
+  max-width: 95vw;
+  height: 100%;
+  font-family: sans-serif;
+}
+.linea-tiempo::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: rgb(14, 13, 13);
+  left: 50%;
+  height: 100%;
+  border-radius: 10px;
+}
+.linea-tiempo .momento {
+  position: relative;
+  width: 45%;
+  box-sizing: border-box;
+  padding: 6px;
+}
+.linea-tiempo .momento .descripcion {
+  border: 2px solid rgb(32, 30, 30);
+  background-color: rgb(174, 243, 208);
+  border-radius: 6px;
+  padding: 5px;
+}
+.linea-tiempo .momento::after {
+  content: "";
+  position: absolute;
+  top: calc(50% + 10px);
+  right: calc(-11.11% - 11.5px);
+  height: 20px;
+  width: 20px;
+  background-color: rgb(14, 13, 13);
+  border-radius: 50%;
+}
+
+.momento:nth-child(even) {
+  left: 55%;
+}
+.momento:nth-child(even)::after {
+  left: calc(-11.11% - 8.5px);
 }
 
 .teorias {
@@ -205,6 +260,14 @@ span:hover {
   font-size: 18px;
   gap: 13px;
   line-height: 1.7em;
+}
+
+.carrusel {
+  position: relative;
+  width: 50%;
+  left: 24%;
+  border: 9px solid rgb(211, 208, 208);
+  box-shadow: 5px 5px 5px 5px rgb(39, 39, 39);
 }
 
 .card-text {
