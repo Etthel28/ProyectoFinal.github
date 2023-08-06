@@ -157,10 +157,8 @@ p {
  
    }*/
 
- 
-
-
 .linea-tiempo { 
+   
     position: relative;
    left: 35%;
     width: 500px;
@@ -182,11 +180,18 @@ p {
     width: 45%;
     box-sizing: border-box;
     padding: 6px;
+
+   
+
     .descripcion {
         border: 2px solid rgb(32, 30, 30);
         background-color: rgb(174, 243, 208);
         border-radius: 6px;
         padding: 5px;
+        box-sizing: border-box;
+      
+        
+
        }
     &::after {
         content: '';
@@ -290,6 +295,7 @@ span:hover {
 
 .img-ramas {
     text-align: center;
+
 }
 
 .ramas {
@@ -309,19 +315,43 @@ span:hover {
             text-decoration: underline;
         
             img {
-                opacity: 0.6;
+                opacity: 0.1;
 
             }
         }
 
-        .nombre-ram {
+        .nombre-ram1 {
             color: #000;
             padding: 0;
             margin: 0;
+            position: absolute;
+            left: 24%;
+            top: 30%;
+            opacity: 0;
+            font-family:'Segoe UI';
+
+            &:hover {
+                opacity: 1;
+            }
+            
         }
     }
 
-    
+    .nombre-ram2 { // terminar resto faltante
+        color: #000;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        left: 73%;
+        top: 30%;
+        opacity: 0;
+        font-family:'Segoe UI';
+
+        &:hover {
+            opacity: 1;
+        }
+        
+    }
 }
 
 .otras-areas {

@@ -142,6 +142,7 @@ p {
   background-color: rgb(174, 243, 208);
   border-radius: 6px;
   padding: 5px;
+  box-sizing: border-box;
 }
 .linea-tiempo .momento::after {
   content: "";
@@ -244,12 +245,33 @@ span:hover {
   text-decoration: underline;
 }
 .ramas .nav-links:hover img {
-  opacity: 0.6;
+  opacity: 0.1;
 }
-.ramas .nav-links .nombre-ram {
+.ramas .nav-links .nombre-ram1 {
   color: #000;
   padding: 0;
   margin: 0;
+  position: absolute;
+  left: 24%;
+  top: 30%;
+  opacity: 0;
+  font-family: "Segoe UI";
+}
+.ramas .nav-links .nombre-ram1:hover {
+  opacity: 1;
+}
+.ramas .nombre-ram2 {
+  color: #000;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 73%;
+  top: 30%;
+  opacity: 0;
+  font-family: "Segoe UI";
+}
+.ramas .nombre-ram2:hover {
+  opacity: 1;
 }
 
 .otras-areas {
