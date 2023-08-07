@@ -111,6 +111,10 @@ p {
   padding-top: 25px;
 }
 
+.contenedor {
+  background-image: radial-gradient(circle at 19.58% 93.44%, #ffffff 0, #d6e2ee 50%, #6c99c2 100%);
+}
+
 .linea-tiempo {
   position: relative;
   left: 35%;
@@ -151,11 +155,10 @@ p {
   background-color: rgb(14, 13, 13);
   border-radius: 50%;
 }
-
-.momento:nth-child(even) {
+.linea-tiempo .momento:nth-child(even) {
   left: 55%;
 }
-.momento:nth-child(even)::after {
+.linea-tiempo .momento:nth-child(even)::after {
   left: calc(-11.11% - 8.5px);
 }
 
